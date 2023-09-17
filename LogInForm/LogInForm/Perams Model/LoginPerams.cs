@@ -8,8 +8,9 @@ namespace LogInForm.Perams_Model
 {
     public class LoginPerams
     {
-        public string Email { get; set; }
         [Required]
+        public string Email { get; set; }
+        [Required(ErrorMessage ="Password can not be null")]
         public string Password { get; set; }
     }
 }

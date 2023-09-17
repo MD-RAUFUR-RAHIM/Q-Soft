@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success</title>
+</head>
+<body>
+    @if (!string.IsNullOrEmpty(ViewBag.Msg1))
+    {
+
+        <script>
+
+     Swal.fire({
+         icon: 'error', // You can change this to 'success', 'error', 'warning', etc.
+         title: '@ViewBag.Msg1',
+     });
+        </script>
+    }
+    <div>
+        <h1> Techers Data has been saved Successfully</h1>
+
+    </div>
+</body>
+</html>

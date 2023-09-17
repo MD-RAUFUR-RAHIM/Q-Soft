@@ -13,14 +13,8 @@ namespace LogInForm.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
-
-        public ActionResult Contact()
+        public ActionResult Profile()
         {
             ViewBag.Message = "Your contact page.";
 

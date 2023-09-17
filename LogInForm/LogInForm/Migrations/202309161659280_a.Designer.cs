@@ -7,13 +7,13 @@ namespace LogInForm.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitDb : IMigrationMetadata
+    public sealed partial class a : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(a));
         
         string IMigrationMetadata.Id
         {
-            get { return "202309130553256_InitDb"; }
+            get { return "202309161659280_a"; }
         }
         
         string IMigrationMetadata.Source

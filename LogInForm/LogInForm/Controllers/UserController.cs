@@ -22,26 +22,32 @@ namespace LogInForm.Controllers
             var dbContext = new CTSContext();
             if (ModelState.IsValid)
             {
-                var user = dbContext.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
-                if (user != null && user.Password == model.Password)
+                var user = dbContext.Users.FirstOrDefault(u => u.Email == model.Email || u.Password == model.Password);
+                if (user != null)
                 {
-
+                    if(user.Email !=null && user.Email != model.Email)
+                    {
+                        ViewBag.Msg1 = "Invalid Email";
+                        return View();
+                    }
+                    else if(user.Password !=null && user.Password!=model.Password) 
+                    {
+                        ViewBag.Msg2 = "Invalid Password";
+                        return View();
+                    }
+                    else 
                     return RedirectToAction("Submit");
-                }
-                else
-                {
-                    TempData["Msg1"] = "Invalid LogIn";
-                    return RedirectToAction("Contact", "Home");
-                }
+                }    
             }
             else
             { 
                 return View();
             }
+            return View();
         }
         public ActionResult Submit() {
             TempData["Msg"] = "Login Successfull";
-            return RedirectToAction("About", "Home");
+            return RedirectToAction("Profile", "Home");
         }
     }
 }

@@ -12,13 +12,5 @@ namespace LogInForm.Controllers
         {
             return View();
         }
-
-
-        public ActionResult Profile()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

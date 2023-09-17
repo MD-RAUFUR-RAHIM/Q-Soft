@@ -1,0 +1,97 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "TeacherLogIn";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Background color for the entire page */
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Background color for the login form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the form */
+        }
+    </style>
+</head>
+<body>
+    @*@if (ViewBag.Msg1 != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Msg1");
+                };
+            </script>
+        }*@
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if (!string.IsNullOrEmpty(ViewBag.Msg1))
+    {
+
+        <script>
+
+        Swal.fire({
+            icon: 'error', // You can change this to 'success', 'error', 'warning', etc.
+            title: '@ViewBag.Msg1',
+        });
+        </script>
+    }
+
+
+
+    @if (!string.IsNullOrEmpty(ViewBag.Msg2))
+    {
+        <div class="alert alert-danger" role="alert">
+            <script>@ViewBag.Msg2</script>
+        </div>
+    }
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="login-container">
+                    <h2 class="text-center mb-4">Teacher Login</h2>
+                    <form action="/Teacher/TeacherLogIn" method="post">
+
+                        <div class="form-group">
+                            <label for="Email">Email:</label>
+                            <input type="text" id="Email" name="Email" class="form-control" placeholder="Enter your email">
+                            <span class="text-danger">@Html.ValidationMessage("Email")</span>
+                            @*@if (!string.IsNullOrEmpty(ViewBag.Msg1))
+                                {
+                                    <div class="alert alert-danger" role="alert">
+                                        @ViewBag.Msg1
+                                    </div>
+                                }*@
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password:</label>
+                            <input type="password" id="Password" name="Password" class="form-control" placeholder="Enter your password">
+                            <span class="text-danger">@Html.ValidationMessage("Password")</span>
+                            @*@if (!string.IsNullOrEmpty(ViewBag.Msg2))
+                                {
+                                    <div class="alert alert-danger" role="alert">
+                                        @ViewBag.Msg2
+                                    </div>
+                                }*@
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

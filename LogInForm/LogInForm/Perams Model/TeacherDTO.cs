@@ -15,7 +15,7 @@ namespace LogInForm.Perams_Model
         [PhoneValidation]
         public string phone { get; set; }
         public string Gender { get; set; }
-        public int Admin_Id { get; set; }
+        
         [username]
         public string username { get; set; }
         [PasswordValidation]

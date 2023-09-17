@@ -76,7 +76,7 @@ namespace LogInForm.Controllers
                     else
                     if (ViewBag.Msg1 != "Invalid Email" && ViewBag.Msg2 != "Invalid Password")
                     {
-                        Session["Admin_Id"] = user.Email;
+                        Session["Admin_Id"] = user.Id;
                         return RedirectToAction("AdminProfile");
                     }
                    

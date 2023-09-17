@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TeacherList</title>
+</head>
+<body>
+    <div>
+        <table class="table table-bordered">
+            
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>UserName</th>
+                    <th>Password</th>
+                </tr>
+            
+            
+                @foreach (var teacher in Model)
+                {
+                    <tr>
+                        <td>@teacher.Name</td>
+                        <td>@teacher.Email</td>
+                        <td>@teacher.phone</td>
+                        <td>@teacher.Gender</td>
+                        <td>@teacher.username</td>
+                        <td>@teacher.password</td>
+                    </tr>
+                }
+            
+        </table>
+    </div>
+</body>
+</html>

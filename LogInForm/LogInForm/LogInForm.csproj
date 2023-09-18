@@ -154,6 +154,10 @@
     <Compile Include="Migrations\202309170625276_Token.designer.cs">
       <DependentUpon>202309170625276_Token.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202309180911408_Temp.cs" />
+    <Compile Include="Migrations\202309180911408_Temp.designer.cs">
+      <DependentUpon>202309180911408_Temp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -161,6 +165,7 @@
     <Compile Include="Models\CTSContext.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\TeacherModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Perams Model\AdminDTO.cs" />
     <Compile Include="Perams Model\TeacherLogInDTO.cs" />
@@ -238,6 +243,7 @@
     <Content Include="Views\Teacher\TeacherProfile.cshtml" />
     <Content Include="Views\Student\Student.cshtml" />
     <Content Include="Views\Student\StudentList.cshtml" />
+    <Content Include="Views\Admin\AssignTeacher.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309170625276_Token.resx">
       <DependentUpon>202309170625276_Token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309180911408_Temp.resx">
+      <DependentUpon>202309180911408_Temp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

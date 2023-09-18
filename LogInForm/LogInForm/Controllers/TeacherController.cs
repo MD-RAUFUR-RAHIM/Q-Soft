@@ -12,7 +12,7 @@ namespace LogInForm.Controllers
     public class TeacherController : Controller
     {
 
-        // GET: Teacher
+        
         [HttpPost]
         public ActionResult Teacher(TeacherDTO teacher)
         {

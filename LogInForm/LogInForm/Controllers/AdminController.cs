@@ -66,12 +66,17 @@ namespace LogInForm.Controllers
                     if (user.Email != null && user.Email != admin.Email)
                     {
                         ViewBag.Msg1 = "Invalid Email";
-                        //return View();
+                       // return View();
                     }
                     else if (user.password != null && user.password != admin.Password)
                     {
                         ViewBag.Msg2 = "Invalid Password";
                        // return View();
+                    }
+                    else if (user.password != null && user.password != admin.Password && user.Email != admin.Email)
+                    {
+                        ViewBag.Msg3 = "Both Email and Password are Invalid";
+                        // return View();
                     }
                     else
                     if (ViewBag.Msg1 != "Invalid Email" && ViewBag.Msg2 != "Invalid Password")
@@ -95,6 +100,69 @@ namespace LogInForm.Controllers
             }
             return RedirectToAction("AdminLogIn");
         }
+
+        //public ActionResult AssignTeacher()
+        //{
+        //    CTSContext db = new CTSContext();
+        //   // var teacherNamesWithIds = db.Teachers.Select(t => new { Id = t.Id, Name = t.Name }).ToList();
+        //    List<string> teacherNamesWithIds = db.Teachers.Select(t => t.Name).ToList();
+        //    ViewBag.TeacherNames = teacherNamesWithIds;
+        //    ////ViewBag.name = new SelectList(db.Teachers.ToList(), "Id", "Name");
+
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult AssignTeacher(string selectedTeacherName)
+        //{
+        //    CTSContext db = new CTSContext();
+        //    List<string> teacherNamesWithIds = db.Teachers.Select(t => t.Name).ToList();
+        //    ViewBag.TeacherNames = teacherNamesWithIds;
+        //    var teacher = db.Teachers.FirstOrDefault(t => t.Name == selectedTeacherName);
+        //    if (teacher != null)
+        //    {
+        //        int teacherId = teacher.Id;
+        //        Session["T_Id"] = teacherId;
+        //        return RedirectToAction("Student", "Student");
+        //    }
+        //    return View();
+        //}
+
+        public ActionResult AssignTeacher()
+        {
+            CTSContext db = new CTSContext();
+
+            var viewModel = new TeacherModel
+            {
+                TeacherNames = db.Teachers.Select(t => t.Name).ToList()
+            };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        public ActionResult AssignTeacher(TeacherModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                CTSContext db = new CTSContext();
+
+                // You can access the selected teacher name from viewModel.SelectedTeacherName
+                string selectedTeacherName = viewModel.SelectedTeacherName;
+
+                int? teacher = db.Teachers.FirstOrDefault(t => t.Name == selectedTeacherName).Id;
+                if (teacher != null)
+                {
+                    int? teacherId = teacher;
+                    Session["T_Id"] = teacherId;
+                    return RedirectToAction("Student", "Student");
+                }
+            }
+
+            // If the model is not valid or the teacher wasn't found, return the view with validation errors.
+            return View(viewModel);
+        }
+
+
+
     }
-    
+
 }

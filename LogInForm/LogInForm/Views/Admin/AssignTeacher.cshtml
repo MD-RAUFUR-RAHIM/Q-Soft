@@ -1,0 +1,15 @@
+﻿
+@model LogInForm.Models.TeacherModel
+@{ 
+    Layout = null;
+}
+@using (Html.BeginForm("AssignTeacher", "Admin", FormMethod.Post))
+{
+    <label for="SelectedTeacherName">Assign a Teacher:</label>
+    @Html.DropDownListFor(model => model.SelectedTeacherName, new SelectList(Model.TeacherNames), new { @class = "form-control" })
+
+    <br />
+    <br />
+    <input type="submit" value="Submit" class="btn btn-primary" />
+}
+

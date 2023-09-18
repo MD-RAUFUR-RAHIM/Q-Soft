@@ -39,7 +39,7 @@
         <script>
 
         Swal.fire({
-            icon: 'error', // You can change this to 'success', 'error', 'warning', etc.
+            icon: 'error', 
             title: '@ViewBag.Msg1',
         });
         </script>
@@ -49,9 +49,25 @@
 
     @if (!string.IsNullOrEmpty(ViewBag.Msg2))
     {
-        <div class="alert alert-danger" role="alert">
-            <script>@ViewBag.Msg2</script>
-        </div>
+        <script>
+
+            Swal.fire({
+                 icon: 'error', 
+                 title: '@ViewBag.Msg2',
+                });
+        </script>
+
+    }
+    @if (!string.IsNullOrEmpty(ViewBag.Msg3))
+    {
+        <script>
+
+         Swal.fire({
+              icon: 'error', 
+              title: '@ViewBag.Msg3',
+             });
+        </script>
+
     }
     <div class="container mt-5">
         <div class="row">

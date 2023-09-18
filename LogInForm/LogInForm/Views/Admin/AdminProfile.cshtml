@@ -5,6 +5,18 @@
 <form action="/Teacher/Teacher" method="get">
     @Html.AntiForgeryToken()
     <div class="text-center">
-     <button type="submit" class="btn btn-green">Teacher</button>
+     <button type="submit" class="btn btn-success btn-block">Teacher</button>
+    </div>
+</form>
+<form action="/Student/StudentList" method="get">
+    @Html.AntiForgeryToken()
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">View Student List</button>
+    </div>
+</form>
+<form action="/Admin/AssignTeacher" method="get">
+    @Html.AntiForgeryToken()
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Add Student</button>
     </div>
 </form>

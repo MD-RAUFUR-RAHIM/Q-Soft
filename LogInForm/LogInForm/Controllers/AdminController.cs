@@ -127,39 +127,39 @@ namespace LogInForm.Controllers
         //    return View();
         //}
 
-        public ActionResult AssignTeacher()
-        {
-            CTSContext db = new CTSContext();
+        //public ActionResult AssignTeacher()
+        //{
+        //    CTSContext db = new CTSContext();
 
-            var viewModel = new TeacherModel
-            {
-                TeacherNames = db.Teachers.Select(t => t.Name).ToList()
-            };
+        //    var viewModel = new TeacherModel
+        //    {
+        //        TeacherNames = db.Teachers.Select(t => t.Name).ToList()
+        //    };
 
-            return View(viewModel);
-        }
-        [HttpPost]
-        public ActionResult AssignTeacher(TeacherModel viewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                CTSContext db = new CTSContext();
+        //    return View(viewModel);
+        //}
+        //[HttpPost]
+        //public ActionResult AssignTeacher(TeacherModel viewModel)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        CTSContext db = new CTSContext();
 
-                // You can access the selected teacher name from viewModel.SelectedTeacherName
-                string selectedTeacherName = viewModel.SelectedTeacherName;
+        //        // You can access the selected teacher name from viewModel.SelectedTeacherName
+        //        string selectedTeacherName = viewModel.SelectedTeacherName;
 
-                int? teacher = db.Teachers.FirstOrDefault(t => t.Name == selectedTeacherName).Id;
-                if (teacher != null)
-                {
-                    int? teacherId = teacher;
-                    Session["T_Id"] = teacherId;
-                    return RedirectToAction("Student", "Student");
-                }
-            }
+        //        int? teacher = db.Teachers.FirstOrDefault(t => t.Name == selectedTeacherName).Id;
+        //        if (teacher != null)
+        //        {
+        //            int? teacherId = teacher;
+        //            Session["T_Id"] = teacherId;
+        //            return RedirectToAction("Student", "Student");
+        //        }
+        //    }
 
-            // If the model is not valid or the teacher wasn't found, return the view with validation errors.
-            return View(viewModel);
-        }
+        //    // If the model is not valid or the teacher wasn't found, return the view with validation errors.
+        //    return View(viewModel);
+        //}
 
 
 

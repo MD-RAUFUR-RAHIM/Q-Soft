@@ -19,5 +19,6 @@ namespace LogInForm.Perams_Model
         public string username { get; set; }
         [PasswordValidation]
         public string password { get; set; }
+        public int T_Id { get; set; }
     }
 }

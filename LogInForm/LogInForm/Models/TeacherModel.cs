@@ -9,7 +9,7 @@ namespace LogInForm.Models
     public class TeacherModel
     {
         
-        public string SelectedTeacherName { get; set; }
-        public List<string> TeacherNames { get; set; }
+        public int SelectedTeacherId { get; set; }
+        public List<int> TeacherId { get; set; }
     }
 }

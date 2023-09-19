@@ -138,27 +138,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202309160745598_initDB.cs" />
-    <Compile Include="Migrations\202309160745598_initDB.designer.cs">
-      <DependentUpon>202309160745598_initDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309160806466_initDB2.cs" />
-    <Compile Include="Migrations\202309160806466_initDB2.designer.cs">
-      <DependentUpon>202309160806466_initDB2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309161659280_a.cs" />
-    <Compile Include="Migrations\202309161659280_a.designer.cs">
-      <DependentUpon>202309161659280_a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309170625276_Token.cs" />
-    <Compile Include="Migrations\202309170625276_Token.designer.cs">
-      <DependentUpon>202309170625276_Token.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309180911408_Temp.cs" />
-    <Compile Include="Migrations\202309180911408_Temp.designer.cs">
-      <DependentUpon>202309180911408_Temp.cs</DependentUpon>
+    <Compile Include="Migrations\202309190446311_InitDB.cs" />
+    <Compile Include="Migrations\202309190446311_InitDB.designer.cs">
+      <DependentUpon>202309190446311_InitDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\TeacherList.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdminLogIn.cs" />
@@ -276,20 +261,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202309160745598_initDB.resx">
-      <DependentUpon>202309160745598_initDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309160806466_initDB2.resx">
-      <DependentUpon>202309160806466_initDB2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309161659280_a.resx">
-      <DependentUpon>202309161659280_a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309170625276_Token.resx">
-      <DependentUpon>202309170625276_Token.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309180911408_Temp.resx">
-      <DependentUpon>202309180911408_Temp.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202309190446311_InitDB.resx">
+      <DependentUpon>202309190446311_InitDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

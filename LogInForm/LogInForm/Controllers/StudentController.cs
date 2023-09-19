@@ -15,19 +15,40 @@ namespace LogInForm.Controllers
         [HttpGet]
         public ActionResult Student()
         {
+            CTSContext db = new CTSContext();
+
+            var viewModel = new TeacherModel
+            {
+                TeacherId = db.Teachers.Select(t => t.Id).ToList()
+            };
+
+            var list = db.Teachers.Select(x=> new TeacherList()
+            {
+                Id= x.Id,
+                Name = x.Name,  
+            }).ToList();
+           
+            if(list!=null)
+            {
+                ViewBag.TeacherList = list;
+            }
+
             return View();
+           // return View();
         }
         [HttpPost]
         public ActionResult Student(StudentDTO  s)
         {
             CTSContext db = new CTSContext();
-            Teacher teacher = new Teacher();
+            TeacherList teacher = new TeacherList();
+            int? teacherId = Session["T_Id"] as int?;
+            int? user2 = Session["Admin_Id"] as int?;
+            int? user = Session["A_Id"] as int?;
 
-            
-            int? teacherId = (int)Session["T_Id"];
-            int? user2 = (int)Session["Admin_Id"];
-            if(user2!=null && teacherId != null)
+            if (user2!=null)
             {
+                int selectedTeacherId = s.T_Id;
+                //Session["T_Id"] = teacherId;
                 LogInForm.Models.Student StudentDB = new LogInForm.Models.Student();
                 StudentDB.Name = s.Name;
                 StudentDB.phone = s.phone;
@@ -35,16 +56,18 @@ namespace LogInForm.Controllers
                 StudentDB.password = s.password;
                 StudentDB.Gender = s.Gender;
                 StudentDB.A_Id = (int)user2;
-                StudentDB.T_Id = (int)teacherId;
+                StudentDB.T_Id = selectedTeacherId;
                 StudentDB.Email = s.Email;
                 db.Students.Add(StudentDB);
                 db.SaveChanges();
-                RedirectToAction("Index", "Home");
+                 return RedirectToAction("Index", "Home");
             }
-            else if (teacherId!= null )
+           
+            else if (user!= null )
             {
-                int? user = (int)Session["A_Id"];
-                if (user != null)
+                int selectedTeacherId = s.T_Id;
+
+                if (selectedTeacherId != null && selectedTeacherId!=0)
                 {
                     //int id = user.Admin_Id;
                     LogInForm.Models.Student StudentDB = new LogInForm.Models.Student();
@@ -59,7 +82,7 @@ namespace LogInForm.Controllers
                     db.Students.Add(StudentDB);
                     db.SaveChanges();
                     //return View();
-                    RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -69,7 +92,8 @@ namespace LogInForm.Controllers
             //else {
             //    RedirectToAction("Index", "Home");
             //}
-            return View();
+            return View();  
+          
            
         }
         public ActionResult StudentList()

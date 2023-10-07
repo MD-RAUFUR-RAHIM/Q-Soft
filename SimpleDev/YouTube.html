@@ -1,39 +1,120 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      p{
+        font-family: Roboto,Arial;
+        margin-top:0;
+        margin-bottom:0;
+      }
       .thumbnail {
         width: 300px;
         display: block;
       }
       .search-bar {
-        font-size: 20px;
-        margin-left: 12px;
+      display: block;
       }
-      .video-title {
-        width: 280px;
+       .video-title {
+        margin-top: 0px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        margin-bottom: 12px;
+      } 
+      .video-preview{
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        margin:15px;
       }
+      .cats{
+        display: inline-block;
+        width: 60px;
+        vertical-align: top;
+        
+      }
+      .video-info{
+        display: inline-block;
+        width: 200px;
+      }
+      .cat-profile{
+        width: 100%;
+        border-radius: 50px;
+      }
+      .thumbnail-row{
+        margin-bottom: 12px;
+      }
+      .author,
+      .video-stats{
+        font-size: 12px;
+        color: rgb(96,96,96);
+      }
+      .author{
+        margin-bottom: 4px;
+      }
+      
     </style>
   </head>
   <body>
    
     <input class="search-bar" type="text" placeholder="Search">
-    <img class="thumbnail" src="F:\ASP .NET\Q-Soft\SimpleDev\Thumbnail\hqdefault.webp">
-    <p class="video-title">
-      Talking Tech and AI with Google CEO
-    </p>
-    <p class="video-stats">
-      3.4M views &#183; 6 months ago
-    </p>
-    <p class="author">
-      Marques Browlee &#10003;
-    </p>
-    <p class="video-des">
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault.webp"> 
+      </div>
+      <div>
+        <div class="cats">
+          <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\prettycats-660x400.jpg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking Tech and AI with Google CEO
+          </p>
+          <p class="author">
+            Marques Browlee &#10003;
+          </p>
+          <p class="video-stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>  
+      </div>
+    </div>
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault1.webp"> 
+      </div>
+      <div>
+        <div class="cats">
+          <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile.jpg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            What is a JavaScript Framework? (in detail) by SuperSimpleDev
+          </p>
+          <p class="author">
+            Mark Piller &#10003;
+          </p>
+          <p class="video-stats">
+            4.4M views &#183; 6 months ago
+          </p>
+        </div>  
+      </div>
+    </div> 
+     
+
+     
+    <!-- <p class="video-des">
       Talking Tech and AI on the heels of Google I/O.
       Using Chat Gpt and Bing and Midjourney
     </p>
     <p class="apple-text">
       Shop early for the best selection of holiday favorites. <span class="span-example">Shop now &#62;</span>
-    </p>
+    </p> -->
+     
   </body>
 </html>

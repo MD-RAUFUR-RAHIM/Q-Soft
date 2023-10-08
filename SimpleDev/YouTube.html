@@ -4,117 +4,172 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      p{
-        font-family: Roboto,Arial;
-        margin-top:0;
-        margin-bottom:0;
-      }
-      .thumbnail {
-        width: 300px;
-        display: block;
-      }
-      .search-bar {
-      display: block;
-      }
-       .video-title {
-        margin-top: 0px;
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 20px;
-        margin-bottom: 12px;
-      } 
-      .video-preview{
-        width: 300px;
-        display: inline-block;
-        vertical-align: top;
-        margin:15px;
-      }
-      .cats{
-        display: inline-block;
-        width: 60px;
-        vertical-align: top;
-        
-      }
-      .video-info{
-        display: inline-block;
-        width: 200px;
-      }
-      .cat-profile{
-        width: 100%;
-        border-radius: 50px;
-      }
-      .thumbnail-row{
-        margin-bottom: 12px;
-      }
-      .author,
-      .video-stats{
-        font-size: 12px;
-        color: rgb(96,96,96);
-      }
-      .author{
-        margin-bottom: 4px;
-      }
-      
-    </style>
+    <link rel="stylesheet" href="E:\Q-Soft\SimpleDev\styles\General.css">
+    <link rel="stylesheet" href="E:\Q-Soft\SimpleDev\styles\header.css">
+    <link rel="stylesheet" href="E:\Q-Soft\SimpleDev\styles\video.css">
+    <link rel="stylesheet" href="E:\Q-Soft\SimpleDev\styles\sidebar.css">
   </head>
   <body>
-   
-    <input class="search-bar" type="text" placeholder="Search">
-
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault.webp"> 
-      </div>
-      <div>
-        <div class="cats">
-          <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\prettycats-660x400.jpg">
-        </div>
-        <div class="video-info">
-          <p class="video-title">
-            Talking Tech and AI with Google CEO
-          </p>
-          <p class="author">
-            Marques Browlee &#10003;
-          </p>
-          <p class="video-stats">
-            3.4M views &#183; 6 months ago
-          </p>
-        </div>  
-      </div>
+   <div class="header">
+    <div class="left-section">
+      <img class="hamburger-menu" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\three-bars_1.svg">
+      <img class="youtube-logo" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\YouTube-Logo.png">
     </div>
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+      <button class="search-button">
+        <img class="img-search-icon" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\R.png">
+      </button>
+      <button class="voice-button">
+        <img class="voice-search-icon" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\OIP.jpg"> 
+      </button>
+    </div>
+    <div class="right-section">
+      <img class="upload-icon" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\4917590.png">
+      <img class="youtube-apps-icon" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\sixdot.png">
+      <img class="notification-icon" src="E:\Q-Soft\SimpleDev\Thumbnail\Icons\Bell.jpg">
+      <img class="profile-icon" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile (2).jpg">
+    </div>
+    
+   </div>
 
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault1.webp"> 
-      </div>
-      <div>
-        <div class="cats">
-          <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile.jpg">
+   <div class="sidebar">
+    SideBar
+   </div>
+
+
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault.webp"> 
         </div>
-        <div class="video-info">
-          <p class="video-title">
-            What is a JavaScript Framework? (in detail) by SuperSimpleDev
-          </p>
-          <p class="author">
-            Mark Piller &#10003;
-          </p>
-          <p class="video-stats">
-            4.4M views &#183; 6 months ago
-          </p>
-        </div>  
+        <div class="video-info-grid">
+          <div class="cats">
+            <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\prettycats-660x400.jpg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with Google CEO
+            </p>
+            <p class="author">
+              Marques Browlee &#10003;
+            </p>
+            <p class="video-stats">
+              3.4M views &#183; 6 months ago
+            </p>
+          </div>  
+        </div>
       </div>
+  
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault1.webp"> 
+        </div>
+        <div class="video-info-grid">
+          <div class="cats">
+            <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile.jpg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              What is a JavaScript Framework? (in detail) by SuperSimpleDev
+            </p>
+            <p class="author">
+              Mark Piller &#10003;
+            </p>
+            <p class="video-stats">
+              4.4M views &#183; 6 months ago
+            </p>
+          </div>  
+        </div>
+      </div> 
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault (1).webp"> 
+        </div>
+        <div class="video-info-grid">
+          <div class="cats">
+            <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile (1).jpg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Meet a 12-year-old hacker and cyber security expert
+            </p>
+            <p class="author">
+              CBS Mornings &#10003;
+            </p>
+            <p class="video-stats">
+              4.4M views &#183; 8 months ago
+            </p>
+          </div>  
+        </div>
+      </div>
+  
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault (2).webp"> 
+        </div>
+        <div class="video-info-grid">
+          <div class="cats">
+            <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile (2).jpg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+            What are you going to do in 2023? Tops 5 skills to get!
+            </p>
+            <p class="author">
+              David Bombal  &#10003;
+            </p>
+            <p class="video-stats">
+              5.4M views &#183; 8 months ago
+            </p>
+          </div>  
+        </div>
+      </div> 
+  
+  
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hqdefault (3).webp"> 
+        </div>
+        <div class="video-info-grid">
+          <div class="cats">
+            <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\channels4_profile (3).jpg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">  
+            One of the Greatest Speeches Ever | Steve Jobs
+            </p>
+            <p class="author">
+              Motivational Speaker  &#10003;
+            </p>
+            <p class="video-stats">
+              10.4M views &#183; 11 months ago
+            </p>
+          </div>  
+        </div>
+      </div>
+  
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="E:\Q-Soft\SimpleDev\Thumbnail\hq720.webp"> 
+        </div>
+        <div class="video-info-grid">
+          <div class="cats">
+            <img  class="cat-profile" src="E:\Q-Soft\SimpleDev\Thumbnail\unnamed.jpg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              It Will Give You Goosebumps | Elon Musk (Motivational Video)
+            </p>
+            <p class="author">
+              Motivation Madness &#10003;
+            </p>
+            <p class="video-stats">
+              4.4M views &#183; 6 months ago
+            </p>
+          </div>  
+        </div>
+      </div> 
     </div> 
-     
-
-     
-    <!-- <p class="video-des">
-      Talking Tech and AI on the heels of Google I/O.
-      Using Chat Gpt and Bing and Midjourney
-    </p>
-    <p class="apple-text">
-      Shop early for the best selection of holiday favorites. <span class="span-example">Shop now &#62;</span>
-    </p> -->
-     
   </body>
 </html>

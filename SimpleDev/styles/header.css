@@ -11,6 +11,7 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(240, 240, 240);
+    z-index: 100;
   }
 .left-section{
   align-items: center;
@@ -49,6 +50,7 @@
   border-style: solid;
   border-color: rgb(192,192,192);
   margin-left: -1px;
+  position: relative;
 }
 .voice-button{
   height: 40px;
@@ -92,9 +94,30 @@
 }
 .notification-icon{
   height: 24px;
+  
 }
+.notification-icon-container{
+  position: relative;
+}
+.notification-count{
+  position: absolute;
+  top: -2px;
+  right:-3px;
+  background-color: red;
+  color:white;
+  font-family: Roboto, Arial;
+  font-size:11px;
+  padding-left:4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 8px;
+
+} 
 .profile-icon{
   height: 30px;
   width: 30px;
   border-radius: 15px;
 }
+
+

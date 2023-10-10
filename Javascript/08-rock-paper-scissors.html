@@ -27,13 +27,14 @@
     </button>
   <script>
 
-  let score= JSON.parse(localStorage.getItem('score'));
-  if(score === null)
-  {
-    score.wins= 0;
-    score.losses= 0;
-    score.ties = 0;
-  }
+  //let score= JSON.parse(localStorage.getItem('score'));
+  let score= JSON.parse(localStorage.getItem
+  ('score')) || {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    };
+  
 
     function pickComputerMove()
     {
@@ -115,7 +116,8 @@
        else{
         score.ties +=1;
        }
-       localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score', JSON.stringify(score));
+      //  console.log(typeof localStorage.setItem('score', JSON.stringify(score)));
         alert(`You picked ${playerMove}. Computer picked ${computerMove}.  ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}` );
 

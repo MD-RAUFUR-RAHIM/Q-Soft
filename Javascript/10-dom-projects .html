@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom Projects</title>
+    <style>
+      .subscribe-button{
+          border: none;
+          background-color: black;
+          color: white;
+          padding-right: 15px;
+          padding-left: 15px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          font-weight: bold;
+          border-radius: 15px;
+          cursor: pointer;
+      }
+      .is-subscribed{
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p> 
+    <button onclick="
+    subscribe();
+   " class="js-subscribe-button subscribe-button">Subscribe</button>
+   <p> Amazon Shipping Calculator</p>
+   <input placeholder="Cost of Order" class="js-cost-input"
+      onkeydown ="
+       handleCostKeydown(event);
+       ">
+   <button onclick="
+   calculateTotal();
+   ">Calculate</button>
+   <p class="js-total-cost"></p>
+    
+    <script>
+      String(25)
+      console.log
+      function handleCostKeydown(event){
+        if(event.key === 'Enter')
+        {
+          calculateTotal();
+        }
+      }
+      function calculateTotal(){
+        let inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value); 
+        if(cost < 40){
+          cost = cost + 10;
+          document.querySelector('.js-total-cost').innerHTML =`$${cost}`;
+        }
+        else
+        document.querySelector('.js-total-cost').innerHTML =`$${cost}`;
+      }
+      function subscribe(){
+        const buttonElement= document.querySelector('.js-subscribe-button');
+          if(buttonElement.innerText === 'Subscribe')
+          {
+            buttonElement.innerHTML = 'Subscribed';
+            buttonElement.classList.add('is-subscribed');
+          }
+          else{
+            buttonElement.innerHTML = 'Subscribe';
+            buttonElement.classList.remove('is-subscribed');
+          }
+      }
+    </script>
+  </body>
+</html>
